@@ -1,0 +1,63 @@
+.outletSelector {
+    background: url('/bennett_img.png') no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px auto;
+    justify-content: center;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.outletSelector-text h1{
+    padding: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.outlets-list {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 2rem;
+    justify-items: center;
+    /* background: url('./Bennett.png') no-repeat; */
+    justify-content: center;
+}
+
+.outlets-list img {
+    width: 70%;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.outlets-list-box {
+    background-color: tomato;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    max-width: 50%;
+    height: 15vw;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+    border: 2px solid tomato;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.outlets-list-box img{
+    /* width: 100%; */
+    /* height: 100%; */
+}
+.outlets-list-box:hover{
+    cursor: pointer;
+    background-color: rgb(177, 136, 136);
+    transform: scale(1.05);
+}
