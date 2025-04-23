@@ -31,25 +31,24 @@ const PlaceOrder = () => {
   const placeOrder = async (event) => {
     event.preventDefault();
     let orderItems = [];
-    food_list.map((item)=>{
-      if (cartItems[item._id]>0) {
-        let itemInfo = item;
-        itemInfo["quantity"] = cartItems[item._id];
-        orderItems.push(itemInfo);
-      }
-    })
+    food_list.map((item) => {
+        if (cartItems[item._id] > 0) {
+            let itemInfo = item;
+            itemInfo["quantity"] = cartItems[item._id];
+            orderItems.push(itemInfo);
+        }
+    });
     let orderData = {
-      address:data,
-      items:orderItems,
-      amount:getTotalCartAmount()+50,
-    }
-    let response = await axios.post(url+'/api/order/place',orderData,{headers:{token}});
+        address: data,
+        items: orderItems,
+        amount: getTotalCartAmount() + 50,
+    };
+    let response = await axios.post(url + '/api/order/place', orderData, { headers: { token } });
     if (response.data.success) {
-      const {sessionUrl} = response.data;
-      window.location.href = sessionUrl;
-    }
-    else{
-      alert('Error');
+        const sessionUrl = response.data.sessionUrl; // Use the correct key
+        window.location.href = sessionUrl;
+    } else {
+        alert('Error');
     }
   }
 
