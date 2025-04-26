@@ -1,8 +1,8 @@
 import foodModel from "../models/foodModel.js";
 import fs from 'fs'
-3
-//add foodItem
 
+
+//add foodItem
 const addFood = async (req, res) => {
 
     let image_filename = `${req.file.filename}`;

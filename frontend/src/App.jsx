@@ -12,6 +12,7 @@ import Southern from './pages/Southern/Southern'
 import SnapEats from './pages/SnapEats/SnapEats'
 import Quench from './pages/Quench/Quench'
 import Verify from './pages/Verify/Verify'
+import MyOrders from './pages/MyOrders/MyOrders'
 
 const App = () => {
 
@@ -28,8 +29,10 @@ const App = () => {
             <Route path='/cart' element={<Cart />} />
             <Route path='/order' element={<PlaceOrder />} />
             <Route path='/verify' element={<Verify/>}/>
-            <Route path='/bennett-foods' element={<OutletSelector />} />
+            <Route path='/myorders' element={<MyOrders/>}/>
 
+            //bennett-foods
+            <Route path='/bennett-foods' element={<OutletSelector />} />
             <Route path='/bennett-foods/hotspot' element={<Hotspot />} />
             <Route path='/bennett-foods/southern' element={<Southern />} />
             <Route path='/bennett-foods/snapeats' element={<SnapEats />} />
