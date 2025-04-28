@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import {assets} from '../../assets/admin_assets/assets'
 
+//to show the order details on Admin panel
 const Orders = ({url}) => {
 
   const [orders,setOrders] = useState([]);
